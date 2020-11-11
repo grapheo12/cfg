@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CFG and DFA</title>
+        <script src="deps/sigma.min.js"></script>
+        <script src="deps/sigma.require.js"></script>
+        <script src="deps/plugins/sigma.exporters.svg.min.js"></script>
+        <script src="deps/plugins/sigma.exporters.svg.min.js"></script>
+        <script src="deps/plugins/sigma.layout.forceAtlas2.min.js"></script>
+        <script src="deps/plugins/sigma.layout.noverlap.min.js"></script>
+        <script src="deps/plugins/sigma.neo4j.cypher.min.js"></script>
+        <script src="deps/plugins/sigma.parsers.gexf.min.js"></script>
+        <script src="deps/plugins/sigma.parsers.json.min.js"></script>
+        <script src="deps/plugins/sigma.pathfinding.astar.min.js"></script>
+        <script src="deps/plugins/sigma.plugins.animate.min.js"></script>
+        <script src="deps/plugins/sigma.plugins.dragNodes.min.js"></script>
+        <script src="deps/plugins/sigma.plugins.filter.min.js"></script>
+        <script src="deps/plugins/sigma.plugins.neighborhoods.min.js"></script>
+        <script src="deps/plugins/sigma.plugins.relativeSize.min.js"></script>
+        <script src="deps/plugins/sigma.renderers.customEdgeShapes.min.js"></script>
+        <script src="deps/plugins/sigma.renderers.customShapes.min.js"></script>
+        <script src="deps/plugins/sigma.renderers.edgeDots.min.js"></script>
+        <script src="deps/plugins/sigma.renderers.edgeLabels.min.js"></script>
+        <script src="deps/plugins/sigma.renderers.parallelEdges.min.js"></script>
+        <script src="deps/plugins/sigma.renderers.snapshot.min.js"></script>
+        <script src="deps/plugins/sigma.statistics.HITS.min.js"></script>
+
+    </head>
+    <body>
+        <p id="controls">
+            Write code without line numbers.
+            The internal line numbering starts from 0.
+            Drag the nodes to see all the edges properly.
+            Zoom in to see the arrows (they are quite small).
+            To zoom in scroll down inside the canvas.
+            To zoom out scroll up.
+            Refresh the page to reset the CFG.
+            Tested on Firefox on a PC.
+        </p>
+        <textarea id="prog" height="300" width="400"></textarea>
+        <button id="btn">Find CFG</button>
+        <br>
+        <div id="container"></div>
+        <style>
+            #container {
+                max-width: 800px;
+                height: 600px;
+                margin: auto;
+                border-width: 10px;
+                border-color: black;
+                background-color: beige;
+            }
+            #controls{
+                color: red;
+            }
+        </style>
+        <script src="/main.js"></script>
+    </body>
+</html>
